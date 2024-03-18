@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 150px);
+    grid-row-gap: 30px;
+    padding: 20px;
+    width: 100%;
+
+}
+.item {
+    background-color: rgb(205, 255, 255);
+    border-radius: 50%;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.stats-container {
+    grid-column: 1/5;
+    font-size: 50px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.num {
+    color: blue
+}
+.item:hover {
+    background-color: rgb(139, 255, 255);
+}
