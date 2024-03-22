@@ -1,31 +1,143 @@
+:root {
+    --main-color: hsl(208, 100%, 50%);
+    --background: #292929;
+    --light-background: #454545;
+}
+* {
+    font-family: Arial, sans-serif;
+}
 body {
-    display: grid;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+}
+#mainH {
+    color: white;
+    font-weight: bold;
+}
+.UserMove {
+    display: flex;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(3, 150px);
-    grid-row-gap: 30px;
-    padding: 20px;
-    width: 100%;
-
-}
-.item {
-    background-color: rgb(205, 255, 255);
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     padding: 10px;
-    width: 150px;
-    height: 150px;
+    border-radius: 5px;
+    background: var(--main-color);
     cursor: pointer;
+    border: none;
+}
+.UserMove:hover {
+    background:  hsl(208, 100%, 60%);
+}
+.UserMove:active {
+    background:  hsl(208, 100%, 70%);
+}
+.userMoveChoiceContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: auto;
 }
 .stats-container {
-    grid-column: 1/5;
     font-size: 50px;
     font-family: Arial;
     font-weight: bold;
 }
-.num {
-    color: blue
+.moveInfoContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: minmax(30px, auto) 120px;
+    align-items: center;
+    justify-items: center;
 }
-.item:hover {
-    background-color: rgb(139, 255, 255);
+#vs {
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+    grid-column: 2/3;
+}
+#youTitle {
+    grid-column: 1/2;
+}
+#computerTitle {
+    grid-column: 3/4;
+}
+#youMove {
+    grid-column: 1/2;
+}
+#computerMove {
+    grid-column: 3/-1;
+}
+.smbMove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--main-color);
+    cursor: pointer;
+    border: none;
+}
+.num {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 30px;
+}
+.nameTitle {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#result {
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+}
+.results {
+    background: var(--light-background);
+    width: 300px;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.resultDiv {
+    width: 300px;
+    height: 50px;
+    background: var(--light-background);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width: 400px) {
+    .UserMove {
+        width: 70px;
+        height: 70px;
+    }
+    .smbMove {
+        width: 70px;
+        height: 70px;
+    }
+    .moveInfoContainer {
+        grid-template-columns: repeat(3, 90px);
+        grid-template-rows: minmax(30px, auto) 90px;
+    }
+    #vs {
+        font-size: 30px;
+    }
 }

@@ -5,21 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body>
-        <img class="item" id="rock" src="https://cdn-icons-png.freepik.com/512/10163/10163227.png">
-        <img class="item" id="paper" src="https://cdn-icons-png.freepik.com/512/4334/4334402.png">
-        <img class="item" id="scissors" src="https://cdn-icons-png.freepik.com/512/4301/4301274.png">
-        <div class="stats-container">
-            Computer move: <span id="comp-move" class="num">None</span><br>
-            Player move: <span id="player-move" class="num">None</span><br>
-            Result: <span id="result" class="num">None</span>
+        <h1 id="mainH">Rock Paper Scissors</h1>
+        <div class="moveInfoContainer">
+                <p id="youTitle" class="nameTitle">You</p>
+                <p id="computerTitle" class="nameTitle">Computer</p>
+                <div id="youMove" class="smbMove"><img id="youMovePhoto"src="images/question.svg"></div>   
+                <div id="vs">VS</div>
+                <div id="computerMove" class="smbMove"><img id="computerMovePhoto" src="images/question.svg"></div>   
         </div>
-        <div class="stats-container">
+
+        <div class="resultDiv"><p id="result"></p></div>
+
+        <div class="results">
             Draws: <span id="draw-num" class="num">0</span><br>
             Wins: <span id="win-num" class="num">0</span><br>
             Loses: <span id="lose-num" class="num">0</span><br>
         </div>
+
+        <div class="userMoveChoiceContainer">
+            <div class="UserMove" id="rock"><img src="images/rock.svg"></div>
+            <div class="UserMove" id="paper"><img src="images/paper.svg"></div>
+            <div class="UserMove" id="scissors"><img src="images/scissors.svg"></div>
+        </div>
+
     <script src="index.js"></script>
 </body>
 </html>
