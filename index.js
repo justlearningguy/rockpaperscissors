@@ -60,7 +60,6 @@ paper.onclick = function() {
         result.textContent = "Lose"
     }
 }
-
 scissors.onclick = function() {
     youMovePhoto.src = "images/scissors.svg";
     player_move_var = 3;
